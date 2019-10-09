@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  match: one
+  metric: one
+  player: one
+
+two:
+  match: two
+  metric: two
+  player: two
