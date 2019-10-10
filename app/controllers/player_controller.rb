@@ -19,7 +19,12 @@ class PlayerController < ApplicationController
     p1.matches_metrics_player.where(metric_id: 1).order(created_at: :desc).limit(5).count
   end
 
+  def top_5_players_by_best_runner_in_all_teams
+    player_ids = MatchesMetricsPlayer.where(metric_id: 1).pluck(:player_id)
+    counts = player_ids.group_by{|i| i}.map{|k,v| [k, v.count] }
 
+    sorted_hash = Hash[*counts.flatten]
+  end
 
   private
 
@@ -28,3 +33,13 @@ class PlayerController < ApplicationController
   end
 
 end
+
+
+
+
+
+arr = [1, 1, 6]
+counts = arr.group_by{|i| i}.map{|k,v| [k, v.count] }
+Hash[*counts.flatten]
+
+arr.max_by{|k,v| v}
