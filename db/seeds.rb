@@ -45,8 +45,8 @@ p3.matches_metrics_player.create(match_id: ma3.id, metric_id: 1)
 
 p4.matches_metrics_player.create(match_id: ma4.id, metric_id: 2)
 
-p6.matches_metrics_player.create(match_id: ma6.id, metric_id: 1)
-p6.matches_metrics_player.create(match_id: ma5.id, metric_id: 1)
+p6.matches_metrics_player.create(match_id: ma6.id, metric_id: 1, team_id: 2)
+p6.matches_metrics_player.create(match_id: ma5.id, metric_id: 1, team_id: 2)
 p 'MatchesMetricsPlayer has been created'
 
 

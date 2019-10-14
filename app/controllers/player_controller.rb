@@ -23,4 +23,12 @@ class PlayerController < ApplicationController
     creating_hash.sort_by {|k,v| v}.reverse
   end
 
+  def top_5_players_by_best_runner_in_one_team
+    player_ids = MatchesMetricsPlayer.where(metric_id: 1, team_id: 2).pluck(:player_id)
+    counts = player_ids.group_by{|i| i}.map{|k,v| [k, v.count] }
+
+    creating_hash  = Hash[*counts.flatten]
+    creating_hash.sort_by {|k,v| v}.reverse
+  end
+
 end
