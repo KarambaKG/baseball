@@ -32,3 +32,22 @@ p 'Matches has been created'
 me1 = Metric.create(name: 'best runner')
 me2 = Metric.create(name: 'best goalkeeper')
 p 'Metrics has been created'
+
+p1.matches_metrics_player.create(match_id: ma1.id, metric_id: 1)
+p1.matches_metrics_player.create(match_id: ma2.id, metric_id: 1)
+
+p2.matches_metrics_player.create(match_id: ma4.id, metric_id: 1)
+p2.matches_metrics_player.create(match_id: ma4.id, metric_id: 2)
+
+p3.matches_metrics_player.create(match_id: ma1.id, metric_id: 1)
+p3.matches_metrics_player.create(match_id: ma2.id, metric_id: 1)
+p3.matches_metrics_player.create(match_id: ma3.id, metric_id: 1)
+
+p4.matches_metrics_player.create(match_id: ma4.id, metric_id: 2)
+
+p6.matches_metrics_player.create(match_id: ma6.id, metric_id: 1)
+p6.matches_metrics_player.create(match_id: ma5.id, metric_id: 1)
+p 'MatchesMetricsPlayer has been created'
+
+
+
